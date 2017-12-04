@@ -6,12 +6,16 @@
 # but it makes it tricky to revise. So lame way it is.
 
 day=$1
-echo "Making folder and file structure for Day $1"
-mkdir day$1
-touch day$1/README.md
-touch day$1/input.txt
-touch day$1/solution.py
-touch day$1/solution2.py
-chmod +x day$1/solution.py
-chmod +x day$1/solution2.py
+case ${day#[-+]} in
+  *[!0-9]* | '') echo Not a valid day number; exit 1;;
+  * ) ;;
+esac
+echo "Making folder and file structure for Day ${day?}"
+mkdir day"${day?}"
+touch day"${day?}"/README.md
+touch day"${day?}"/input.txt
+touch day"${day?}"/solution.py
+touch day"${day?}"/solution2.py
+chmod +x day"${day?}"/solution.py
+chmod +x day"${day?}"/solution2.py
 echo "Done"
