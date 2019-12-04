@@ -4,8 +4,7 @@ with open('input.txt', 'r') as f:
     code = f.read().split(',')
 
 # Convert em to ints, instead of strings
-for i in range(len(code)):
-    code[i] = int(code[i])
+code = [int(i) for i in code]
 
 code[1] = 12
 code[2] = 2
