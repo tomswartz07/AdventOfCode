@@ -8,5 +8,4 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      # Check for updates to GitHub Actions during AoC time
-      cron: '0 7 1-25 12 *'
+      interval: "daily"
