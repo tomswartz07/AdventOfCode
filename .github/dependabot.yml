@@ -9,3 +9,10 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "monday"
+      time: "08:00"
+      timezone: "America/New_York"
+    assignees:
+      - "tomswartz07"
+    reviewers:
+      - "tomswartz07"
